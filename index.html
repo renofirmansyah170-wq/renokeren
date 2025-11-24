@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio — Reno Firmansyah</title>
+
+  <!-- Google Font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Reno Firmansyah</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+        <!--li><a href="#services" class="nav-link">Services</a></li>-->
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME / HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hai, saya <span class="accent">Reno Firmansyah</span></h1>
+          <p class="lead">Saya developer / designer yang membuat produk digital dengan fokus pada UI, UX, dan performa.</p>
+           <ul>
+              
+              <li>No HP:082337109270</li>
+              <li>Email: masrenofirmansyah@gmail.com</li>
+            </ul>
+          <p>
+            <a class="btn" href="#projects">Lihat Projects</a>
+            <a class="btn ghost" href="#contact">Hubungi Saya</a>
+          </p>
+        </div>
+        <div class="hero-photo">
+          <!-- Ganti path 'assets/profile.jpg' dengan foto milikmu -->
+          <img src="img/foto.jpg" alt="Foto Nama Anda">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container section-inner">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Perkenalkan: saya lulus SMK jurusan RPL memiliki pengalaman di front-end, back-end, dan desain produk. Saya menyukai solusi yang bersih, cepat, dan mudah digunakan.</p>
+            <ul>
+              <li>Lokasi: Lumajang, Indonesia</li>
+              <li>Freelance / Full-time</li>
+              <li>Email: masrenofirmansyah@gmail.com</li>
+            </ul>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <strong>2</strong>
+              <span>Tahun pengalaman</span>
+            </div>
+            <div class="stat">
+              <strong>2</strong>
+              <span>Projects selesai</span>
+            </div>
+           <!-- <div class="stat">
+              <strong>5</strong>
+              <span>Klien puas</span>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container section-inner">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <!-- contoh project card -->
+          <article class="card">
+            <img src="img/foto2.jpg" alt="Project 1">
+            <div class="card-body">
+              <h3>Project Satu</h3>
+              <p>Deskripsi singkat project: smart home,untuk mempermuda mematikan lampu di rumah, dan hasilnya bisa mematikan lampu dari hp dimanapun berada yang penting ada internet.</p>
+              <a class="link" href="#" target="_blank" rel="noopener">Detail</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/project-2.jpg" alt="Project 2">
+            <div class="card-body">
+              <h3>Project Dua</h3>
+              <p>Deskripsi singkat project:robot avoider,untu memberi pengertian jika ada rintangan di depan harus menghindar,dan hasilnya robot ini bisa menghindari rintangan otomatis.</p>
+              <a class="link" href="#" target="_blank" rel="noopener">Detail</a>
+            </div>
+          </article>
+
+         <!--<article class="card">
+            <img src="assets/project-3.jpg" alt="Project 3">
+            <div class="card-body">
+              <h3>Project Tiga</h3>
+              <p>belum ada.</p>
+              <a class="link" href="#" target="_blank" rel="noopener">Detail</a>
+            </div>
+          </article>--> 
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container section-inner">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <div class="skill">
+            <h4>HTML &amp; CSS</h4>
+            <div class="skill-bar"><span style="width:95%"></span></div>
+          </div>
+          <div class="skill">
+            <h4>JavaScript</h4>
+            <div class="skill-bar"><span style="width:85%"></span></div>
+          </div>
+          <div class="skill">
+            <h4>React / Vue</h4>
+            <div class="skill-bar"><span style="width:75%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES 
+    <section id="services" class="section">
+      <div class="container section-inner">
+        <h2>Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Web Development</h3>
+            <p>Membangun website cepat, responsive, dan SEO-friendly.</p>
+          </div>
+          <div class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>Desain antarmuka dan pengalaman pengguna yang intuitif.</p>
+          </div>
+          <div class="service-card">
+            <h3>Consulting</h3>
+            <p>Konsultasi teknis dan produk untuk startup atau tim dev.</p>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container section-inner small">
+        <h2>Contact</h2>
+      <form action="mailto:masrenofirmansyah@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+  <div class="form-row">
+    <input type="text" name="Nama" placeholder="Nama" required>
+    <input type="email" name="Email" placeholder="Email" required>
+  </div>
+  <textarea name="Pesan" rows="5" placeholder="Pesan..." required></textarea>
+  <div class="form-actions">
+    <button type="submit" class="btn">Kirim Pesan</button>
+  </div>
+</form>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Reno Firmansyah. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
