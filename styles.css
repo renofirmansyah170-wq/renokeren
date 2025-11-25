@@ -41,8 +41,23 @@ body{
 
 /* Mobile toggle */
 .nav-toggle{display:none;background:transparent;border:0;padding:6px}
-.hamburger{display:block;width:22px;height:2px;background:var(--muted);position:relative}
-.hamburger::before,.hamburger::after{content:"";display:block;height:2px;background:var(--muted);position:absolute;left:0;right:0}
+/* Hamburger icon real 3 bars */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--muted);
+  margin: 5px 0;
+  border-radius: 3px;
+}
+
 .hamburger::before{top:-6px}
 .hamburger::after{top:6px}
 
@@ -52,10 +67,10 @@ body{
 .hero-text h1{font-size:2.1rem;margin:0 0 10px}
 .lead{color:var(--muted);margin:0 0 18px}
 .accent{color:var(--accent)}
-.hero-photo img{width:100%;max-width:260px;border-radius:18px;box-shadow:0 12px 30px rgba(4,8,20,0.6);display:block}
+.hero-photo img{width:100%;max-width:255px;border-radius:18px;box-shadow:0 12px 30px rgba(4,8,20,0.6);display:block}
 
 /* Sections */
-.section{padding:280px 0}
+.section{padding:250px 0}
 .section-inner{padding:8px 0}
 .section h2{margin:0 0 18px;font-size:1.4rem;color:#fff}
 
@@ -96,18 +111,17 @@ textarea{padding:10px;border-radius:8px;border:1px solid rgb(0, 0, 0);background
 /* Footer */
 .site-footer{padding:18px 0;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.02)}
 
+
+
 /* responsiveness */
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr; text-align:center}
   .about-grid{grid-template-columns:1fr}
 }
 @media (max-width:720px){
-  .nav-list{position:fixed;top:64px;right:16px;background:rgba(255, 0, 0, 0.96);padding:12px;border-radius:12px;flex-direction:column;display:none;min-width:180px}
+  .nav-list{position:fixed;top:64px;right:16px;background:rgb(131, 131, 131);padding:12px;border-radius:12px;flex-direction:column;display:none;min-width:180px}
   .nav-list.show{display:flex}
   .nav-toggle{display:block}
   .nav{display:block}
   .form-row{flex-direction:column}
 }
-
-
-
