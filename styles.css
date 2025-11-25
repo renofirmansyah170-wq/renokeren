@@ -14,7 +14,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  background: linear-gradient(180deg, rgb(133, 133, 133) 0%, #3a3a3a 100%);
+  background: linear-gradient(180deg, rgb(75, 75, 75) 0%, #3a3a3a 100%);
   color:#ffffff;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -55,7 +55,7 @@ body{
 .hero-photo img{width:100%;max-width:px;border-radius:18px;box-shadow:0 12px 30px rgba(4,8,20,0.6);display:block}
 
 /* Sections */
-.section{padding:260px 0}
+.section{padding:340px 0}
 .section-inner{padding:8px 0}
 .section h2{margin:0 0 18px;font-size:1.4rem;color:#fff}
 
@@ -108,4 +108,5 @@ textarea{padding:10px;border-radius:8px;border:1px solid rgb(0, 0, 0);background
   .nav{display:block}
   .form-row{flex-direction:column}
 }
+
 
