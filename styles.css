@@ -87,35 +87,47 @@ body {
   box-shadow: 0 6px 18px rgb(0, 0, 0);
 }
 
-/* Mobile toggle */
+/* Tombol hamburger */
 .nav-toggle {
   display: none;
-  background: transparent;
-  border: 0;
-  padding: 6px;
-}
-/* Hamburger icon real 3 bars */
-.nav-toggle {
-  display: none;
-  background: transparent;
+  background: none;
   border: 0;
   cursor: pointer;
 }
 
-.nav-toggle .hamburger {
+.nav-toggle span {
   display: block;
   width: 26px;
   height: 3px;
-  background: var(--muted);
   margin: 5px 0;
-  border-radius: 3px;
+  background: white;
+  border-radius: 4px;
 }
 
-.hamburger::before {
-  top: -6px;
-}
-.hamburger::after {
-  top: 6px;
+/* Mobile navbar */
+@media (max-width: 720px) {
+  .nav-list {
+    position: fixed;
+    top: 65px;
+    right: 12px;
+    background: black;
+    padding: 15px;
+    display: none;
+    border-radius: 12px;
+    flex-direction: column;
+    gap: 12px;
+    width: 180px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    z-index: 1500;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }
 
 /* Hero */
@@ -343,5 +355,6 @@ textarea {
     flex-direction: column;
   }
 }
+
 
 
