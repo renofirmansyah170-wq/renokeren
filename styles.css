@@ -120,7 +120,7 @@ body {
 
 /* Hero */
 .hero {
-  padding: 80px;
+  padding: 250px 0;
   
 }
 .hero-inner {
@@ -344,5 +344,6 @@ textarea {
     flex-direction: column;
   }
 }
+
 
 
