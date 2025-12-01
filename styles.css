@@ -345,12 +345,31 @@ textarea {
     flex-direction: column;
   }
 }
+/* FIX CONTACT RESPONSIVE */
 .contact-grid {
   display: grid;
-  gap: 20px;
   grid-template-columns: 1fr 1fr;
-  margin-top: 20px;
+  gap: 20px;
 }
+
+/* HP MODE — kolom jadi 1 */
+@media (max-width: 780px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-info, 
+  .contact-map {
+    width: 100% !important;
+  }
+}
+
+/* Jika section-inner small membuatnya sempit */
+.section-inner.small {
+  width: 100%;
+  max-width: 100% !important;
+}
+
 
 .contact-info {
   background: rgba(255, 255, 255, 0.12);
@@ -403,6 +422,10 @@ textarea {
 .social-item:hover svg {
   transform: scale(1.15);
 }
+/* FIX CONTACT RESPONSIVE */
+
+
+
 
 
 
