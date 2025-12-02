@@ -94,6 +94,12 @@ body {
   border: 0;
   padding: 6px;
 }
+.nav-toggle {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+}
+
 /* Hamburger icon real 3 bars */
 .nav-toggle {
   display: none;
@@ -165,26 +171,10 @@ body {
 }
 
 /* About */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 220px;
-  gap: 24px;
-}
-.about-text p {
-  color: var(--muted);
-}
-.about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 20px;
-}
-.stat {
-  background: var(--glass);
-  padding: 14px;
-  border-radius: 12px;
-  text-align: center;
-}
+.about-grid{display:grid;grid-template-columns:1fr 220px;gap:24px}
+.about-text p{color:var(--muted)}
+.about-stats{display:flex;flex-direction:column;gap:12px}
+.stat{background:var(--glass);padding:14px;border-radius:12px;text-align:center}
 
 /* Projects */
 .projects-grid {
@@ -423,6 +413,7 @@ textarea {
   transform: scale(1.15);
 }
 /* FIX CONTACT RESPONSIVE */
+
 
 
 
