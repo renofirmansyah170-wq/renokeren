@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Portofolio — Reno Firmansyah</title>
 
-    <!-- Google Font (optional) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
+    <!-- NAVIGATION UPDATE -->
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#home">Reno Firmansyah</a>
@@ -33,10 +29,10 @@
           <ul class="nav-list">
             <li><a href="#home" class="nav-link active">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#projects"class="nav-link">Projects</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#portfolio"class="nav-link">Portofolio</a></li>
+            <li><a href="#projects" class="nav-link">Projek</a></li>
+            <li><a href="#blog" class="nav-link">Blog</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
-            <!--li><a href="#services" class="nav-link">Services</a></li>-->
             
           
 
@@ -46,57 +42,60 @@
     </header>
 
     <main>
-      <!-- HOME / HERO -->
+
+      <!-- HOME -->
       <section id="home" class="hero">
         <div class="container hero-inner">
           <div class="hero-text">
             <h1>Hai, saya <span class="accent">Reno Firmansyah</span></h1>
-            <p class="lead">
-              Saya developer / designer yang membuat produk digital dengan fokus
-              pada UI, UX, dan performa.
-            </p>
+            <p class="lead">Developer & Designer. Fokus pada UI, UX, dan performa.</p>
             <ul>
-              <li>No HP:082337109270</li>
+              <li>No HP: 082337109270</li>
               <li>Email: masrenofirmansyah@gmail.com</li>
             </ul>
             <p>
-              <a class="btn" href="#projects">Lihat Projects</a>
+              <a class="btn" href="#projects">Lihat Projek</a>
               <a class="btn ghost" href="#contact">Hubungi Saya</a>
             </p>
           </div>
-          <div class="hero-photo">
-            <!-- Ganti path 'assets/profile.jpg' dengan foto milikmu -->
-            <img src="foto.jpg" alt="Foto Nama Anda" />
+<div><div class="hero-photo">
+            <img src="foto.jpg" alt="Foto Profil" />
+          </div>
+        
+    </div></div>
+          
+
+        </div>
+      </section>
+
+      <!-- TENTANG SAYA -->
+      <section id="about" class="section">
+        <div class="container section-inner">
+          <h2>Tentang Saya</h2>
+          <div class="about-grid">
+
+            <div class="about-text">
+              <p>Saya Reno Firmansyah, lulusan SMKN Pasirian (RPL) dengan pengalaman Front-End, Back-End, dan IoT Smart Home.</p>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat"><strong>3</strong><span>Tahun pengalaman</span></div>
+              <div class="stat"><strong>2</strong><span>Projek selesai</span></div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <!-- ABOUT -->
-       <section id="about" class="section">
-      <div class="container section-inner">
-        <h2>About</h2>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>Perkenalkan: saya Reno Firmansyah lulus SMK Negri Pasirian jurusan RPL memiliki pengalaman di front-end, back-end, dan desain produk. Saya menyukai solusi yang bersih, cepat, dan mudah digunakan.</p>
-        
-          </div>
-          <div class="about-stats">
-            <div class="stat">
-              <strong>3</strong>
-              <span>Tahun pengalaman</span>
-            </div>
-            <div class="stat">
-              <strong>2</strong>
-              <span>Projects selesai</span>
-            </div>
-           
-            </div>
-          </div>
+      <!-- PORTOFOLIO -->
+      <section id="portfolio" class="section">
+        <div class="container section-inner">
+          <h2>Portofolio</h2>
+          <p style="color:white">Berikut beberapa hasil karya yang pernah saya buat.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-      <!-- PROJECTS -->
+      <!-- PROJEK HASIL KARYA -->
       <section id="projects" class="section">
         <div class="container section-inner">
           <h2>Projects</h2>
@@ -144,81 +143,89 @@
         </div>
       </section>
 
-      <!-- SKILLS -->
-      <section id="skills" class="section">
+
+      <!-- BLOG -->
+      <section id="blog" class="section">
         <div class="container section-inner">
-          <h2>Skills</h2>
-          <div class="skills-list">
-            <div class="skill">
-              <h4>HTML</h4>
-              <div class="skill-bar"><span style="width: 50%"></span></div>
-            </div>
-            <div class="skill">
-              <h4>JavaScript</h4>
-              <div class="skill-bar"><span style="width: 50%"></span></div>
-            </div>
-            
-            <div class="skill">
-              <h4>Python</h4>
-              <div class="skill-bar"><span style="width: 50%"></span></div>
-              <div class="skill">
-              <h4>CSS</h4>
-              <div class="skill-bar"><span style="width: 50%"></span></div>
-            </div>
-          </div>
+          <h2>Blog</h2>
+          <p style="color:white">
+            Artikel: <strong>Tatacara Pembuatan Prototype Smart Home</strong>
+          </p>
+<p>1️⃣ Siapkan Komponen
+
+ESP32
+
+Relay module
+
+Lampu (lebih aman pakai lampu DC kecil untuk prototype)
+
+Kabel jumper</p><p>
+2️⃣ Rangkai
+
+ESP32 3.3V/5V → VCC relay
+
+ESP32 GND → GND relay
+
+ESP32 GPIO 23 → IN relay
+
+Kabel lampu masuk lewat relay (COM → NO).
+⚠️ Jika lampu 220V, minta bantuan orang dewasa.</p>
+
+<p>3️⃣ Upload Program
+
+Gunakan kode paling sederhana ini:
+
+#include <WiFi.h>
+#include <WebServer.h>
+
+WebServer server(80);
+const int relayPin = 23;
+
+void setup() {
+  pinMode(relayPin, OUTPUT);
+  digitalWrite(relayPin, HIGH);
+
+  WiFi.softAP("ESP32-AP", "12345678");
+  server.on("/on", [](){ digitalWrite(relayPin, LOW); server.send(200, "text/plain", "ON"); });
+  server.on("/off", [](){ digitalWrite(relayPin, HIGH); server.send(200, "text/plain", "OFF"); });
+  server.begin();
+}
+
+void loop() { server.handleClient(); }</p>
+
+<p>
+4️⃣ Kontrol dari HP
+
+Sambungkan HP ke Wi-Fi ESP32-AP
+
+Buka browser → ketik 192.168.4.1/on (lampu ON)
+
+Ketik 192.168.4.1/off (lampu OFF)</p>
+          
+
         </div>
       </section>
 
-      <!-- SERVICES 
-    <section id="services" class="section">
-      <div class="container section-inner">
-        <h2>Services</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Web Development</h3>
-            <p>Membangun website cepat, responsive, dan SEO-friendly.</p>
-          </div>
-          <div class="service-card">
-            <h3>UI/UX Design</h3>
-            <p>Desain antarmuka dan pengalaman pengguna yang intuitif.</p>
-          </div>
-          <div class="service-card">
-            <h3>Consulting</h3>
-            <p>Konsultasi teknis dan produk untuk startup atau tim dev.</p>
-          </div>
-        </div>
-      </div>
-    </section>-->
-
       <!-- CONTACT -->
-     <section id="contact" class="section">
-  <div class="container section-inner ">
-    <h2>Contact</h2>
+      <section id="contact" class="section">
+        <div class="container section-inner small">
 
-    <div class="contact-grid">
+          <h2>Contact</h2>
 
-      <!-- GOOGLE MAP -->
-      <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d305.9039854146294!2d113.06759848252096!3d-8.255428723649644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1764620065597!5m2!1sid!2sid" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        
-      </div>
+          <div class="contact-grid">
 
-      <!-- CONTACT INFO -->
-      <div class="contact-info">
-        <h3>Hubungi Saya</h3>
+            <div class="contact-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d305.9039854146294!2d113.06759848252096!3d-8.255428723649644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1764620065597!5m2!1sid!2sid" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="400" height="450"></iframe>
+            </div>
 
-        <p><strong>Email:</strong>  
-          <a href="mailto:masrenofirmansyah@gmail.com">masrenofirmansyah@gmail.com</a>
-        </p>
+            <div class="contact-info">
+              <h3>Hubungi Saya</h3>
+              <p><strong>Email:</strong> <a href="mailto:masrenofirmansyah@gmail.com">masrenofirmansyah@gmail.com</a></p>
+              <p><strong>Telepon:</strong> <a href="tel:082337109270">082337109270</a></p>
+              <p><strong>Alamat:</strong> Lumajang, Jawa Timur</p>
 
-        <p><strong>Telepon:</strong>  
-          <a href="tel:082337109270">082337109270</a>
-        </p>
-
-        <p><strong>Alamat:</strong> Lumajang, Jawa Timur</p>
-
-       <!-- MEDSOS -->
-<div class="social-links">
+              <!-- SOSIAL MEDIA -->
+              <div class="social-links">
   
   <!-- Instagram -->
   <a href="https://www.instagram.com/renorendok?igsh=MTl3OTBvcXpoMWJhMg==" target="_blank" class="social-item" aria-label="Instagram">
@@ -283,12 +290,12 @@
 
 </div>
 
-      </div>
+            </div>
 
-    </div>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
     </main>
 
@@ -301,8 +308,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-
