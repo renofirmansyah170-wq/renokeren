@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Edu Game – Math, English, Sports</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #89cff0, #b3e0ff);
+    text-align: center;
+    padding: 20px;
+  }
+
+  h2 {
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+
+  .card {
+    background: white;
+    width: 90%;
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .menu-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-btn {
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    transition: .2s;
+    width: 140px;
+  }
+
+  .menu-btn:hover {
+    transform: scale(1.05);
+  }
+
+  .math { background: #ffbb00; }
+  .eng { background: #27c24c; }
+  .sport { background: #2980ff; }
+
+  #answerInput {
+    padding: 12px;
+    width: 85%;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    transition: .2s;
+  }
+
+  #answerInput:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52,152,219,0.5);
+    outline: none;
+  }
+
+  .progress {
+    height: 8px;
+    width: 100%;
+    background: #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #3498db;
+    transition: width 0.4s ease;
+  }
+
+  .feedback {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .correct { color: #2ecc71; }
+  .wrong { color: #e74c3c; }
+</style>
+</head>
+<body>
+
+<h2>🎮 EDU GAME: MATH – ENGLISH – SPORTS</h2>
+
+<!-- KATEGORY MENU -->
+<div class="card">
+  <h3>Pilih Kategori</h3>
+  <div class="menu-grid">
+    <button class="menu-btn math" onclick="startGame('math')">Matematika</button>
+    <button class="menu-btn eng" onclick="startGame('english')">Bahasa Inggris</button>
+    <button class="menu-btn sport" onclick="startGame('sports')">Olahraga</button>
+  </div>
+</div>
+
+<!-- GAME BOX -->
+<div class="card" id="gameBox" style="display:none;">
+  <div class="progress"><div id="progressBar" class="progress-bar"></div></div>
+
+  <h3 id="question"></h3>
+
+  <input type="text" id="answerInput" placeholder="Jawaban kamu...">
+
+  <br><br>
+  <button class="menu-btn math" onclick="checkAnswer()">Submit</button>
+
+  <p id="feedback" class="feedback"></p>
+</div>
+
+<!-- RESULT BOX -->
+<div class="card" id="resultBox" style="display:none;">
+  <h3>🎉 Hasil Akhir</h3>
+  <h2 id="finalScore"></h2>
+  <br>
+  <button class="menu-btn eng" onclick="resetGame()">Main Lagi</button>
+</div>
+
+<script>
+const questions = {
+  math: [
+    { q: "5 + 7 = ?", a: "12" },
+    { q: "9 × 3 = ?", a: "27" },
+    { q: "20 - 8 = ?", a: "12" },
+  ],
+  english: [
+    { q: "Translate: 'Cat' → ?", a: "kucing" },
+    { q: "Translate: 'Big' → ?", a: "besar" },
+    { q: "Translate: 'Run' → ?", a: "lari" },
+  ],
+  sports: [
+    { q: "Berapa pemain sepak bola dalam satu tim?", a: "11" },
+    { q: "Olahraga yang menggunakan raket adalah?", a: "badminton" },
+    { q: "Cabang olahraga lari disebut?", a: "atletik" },
+  ]
+};
+
+let currentCategory = "";
+let index = 0;
+let score = 0;
+let activeQuestions = [];
+
+function startGame(category) {
+  currentCategory = category;
+  activeQuestions = [...questions[category]];
+  index = 0;
+  score = 0;
+
+  document.getElementById("gameBox").style.display = "block";
+  document.getElementById("resultBox").style.display = "none";
+  document.getElementById("feedback").innerHTML = "";
+
+  updateProgress();
+  showQuestion();
+}
+
+function showQuestion() {
+  if (index < activeQuestions.length) {
+    document.getElementById("question").innerHTML =
+      activeQuestions[index].q;
+  } else {
+    endGame();
+  }
+}
+
+function updateProgress() {
+  let progress = ((index) / activeQuestions.length) * 100;
+  document.getElementById("progressBar").style.width = progress + "%";
+}
+
+function checkAnswer() {
+  const userAnswer = document.getElementById("answerInput").value.toLowerCase().trim();
+  const correct = activeQuestions[index].a.toLowerCase();
+
+  const feedback = document.getElementById("feedback");
+
+  if (userAnswer === correct) {
+    score++;
+    feedback.innerHTML = "✔ Benar!";
+    feedback.className = "feedback correct";
+  } else {
+    feedback.innerHTML = "✘ Salah! Jawaban: " + correct;
+    feedback.className = "feedback wrong";
+  }
+
+  document.getElementById("answerInput").value = "";
+  index++;
+
+  updateProgress();
+
+  setTimeout(() => {
+    feedback.innerHTML = "";
+    showQuestion();
+  }, 1000);
+}
+
+function endGame() {
+  document.getElementById("gameBox").style.display = "none";
+  document.getElementById("resultBox").style.display = "block";
+
+  document.getElementById("finalScore").innerHTML =
+    `Skor kamu: ${score} / ${activeQuestions.length}`;
+}
+
+function resetGame() {
+  document.getElementById("resultBox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
